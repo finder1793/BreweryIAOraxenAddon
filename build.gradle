@@ -20,7 +20,7 @@ repositories {
         url = "https://repo.oraxen.com/releases"
     }
     maven {
-        name "reposiliteRepositorySnapshots"
+        name "nexo"
         url "https://repo.nexomc.com/snapshots"
 }
 }
