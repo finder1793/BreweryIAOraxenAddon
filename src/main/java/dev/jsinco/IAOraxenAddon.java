@@ -13,6 +13,7 @@ public class IAOraxenAddon extends BreweryAddon {
     private static AddonLogger logger;
     private static boolean useItemsAdder = false;
     private static boolean useOraxen = false;
+    private static boolean useNexo = false;
 
     public IAOraxenAddon(BreweryPlugin plugin, AddonLogger logger) {
         super(plugin, logger);
