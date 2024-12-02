@@ -19,6 +19,10 @@ repositories {
         name = "oraxen"
         url = "https://repo.oraxen.com/releases"
     }
+    maven {
+        name "reposiliteRepositorySnapshots"
+        url "https://repo.nexomc.com/snapshots"
+}
 }
 
 dependencies {
@@ -26,4 +30,5 @@ dependencies {
     compileOnly("org.spigotmc:spigot-api:1.20-R0.1-SNAPSHOT")
     compileOnly("com.github.LoneDev6:API-ItemsAdder:3.6.1")
     compileOnly("io.th0rgal:oraxen:1.163.0")
+    compileOnly("com.nexomc:nexo:0.1.0-dev.70")
 }

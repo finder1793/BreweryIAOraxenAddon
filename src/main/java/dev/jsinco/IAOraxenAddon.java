@@ -23,6 +23,7 @@ public class IAOraxenAddon extends BreweryAddon {
     public void onAddonEnable(AddonFileManager addonFileManager) {
         PluginItem.registerForConfig("itemsadder", ItemsAdderPluginItem::new);
         PluginItem.registerForConfig("oraxen", OraxenPluginItem::new);
+        PluginItem.registerForConfig("nexo", NexoPluginItem::new);
 
         BreweryPlugin.getScheduler().runTaskLater(() -> {
             useItemsAdder = Bukkit.getPluginManager().getPlugin("ItemsAdder") != null;
@@ -33,6 +34,9 @@ public class IAOraxenAddon extends BreweryAddon {
             }
             if (useOraxen) {
                 logger.info("Oraxen support enabled!");
+            }
+            if (useNexo) {
+                logger.info("Nexo support enabled!");
             }
         }, 1L);
     }
