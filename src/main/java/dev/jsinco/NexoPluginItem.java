@@ -11,7 +11,7 @@ public class NexoPluginItem extends PluginItem {
             return false;
         }
 
-        final String itemId = NexoItems.getIdByItem(itemStack);
+        final String itemId = NexoItems.idFromItem(itemStack);
         if (itemId == null) {
             return false;
         }
