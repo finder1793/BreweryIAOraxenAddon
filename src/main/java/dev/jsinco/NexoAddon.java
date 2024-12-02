@@ -25,7 +25,7 @@ public class NexoAddon extends BreweryAddon {
         BreweryPlugin.getScheduler().runTaskLater(() -> {
             useNexo = Bukkit.getPluginManager().getPlugin("Nexo") != null;
 
-            }
+            
             if (useNexo) {
                 logger.info("Nexo support enabled!");
             }
