@@ -1,6 +1,11 @@
 plugins {
     id 'java'
 }
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
 
 group = 'dev.jsinco'
 version = '1.2'
