@@ -49,7 +49,9 @@ public class IAOraxenAddon extends BreweryAddon {
     public static boolean isUsingOraxen() {
         return useOraxen;
     }
-
+    public static boolean isUsingNexo() {
+        return useNexo;
+    }
     @Override
     public void onBreweryReload() {
     }
