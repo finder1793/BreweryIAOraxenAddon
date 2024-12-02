@@ -1,1 +1,1 @@
-This addon has been integrated into [BreweryX](https://github.com/Jsinco/BreweryX).
+This addon, is designed to add in Nexo Support to Breweryx
