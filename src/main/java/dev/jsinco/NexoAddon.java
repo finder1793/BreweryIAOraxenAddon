@@ -13,11 +13,6 @@ public class NexoAddon extends BreweryAddon {
     private static AddonLogger logger;
     private static boolean useNexo = false;
 
-    public NexoAddon(BreweryPlugin plugin, AddonLogger logger) {
-        super(plugin, logger);
-        NexoAddon.logger = logger;
-    }
-
     @Override
     public void onAddonEnable(AddonFileManager addonFileManager) {
         PluginItem.registerForConfig("nexo", NexoPluginItem::new);
