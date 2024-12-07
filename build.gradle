@@ -27,7 +27,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.Jsinco:BreweryX:3.1.7")
+    implementation "com.github.Jsinco:BreweryX:3.1.7"
     compileOnly("org.spigotmc:spigot-api:1.20-R0.1-SNAPSHOT")
     compileOnly("com.nexomc:nexo:0.1.0-dev.70")
 }
