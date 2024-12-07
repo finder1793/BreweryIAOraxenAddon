@@ -5,7 +5,6 @@ import com.dre.brewery.api.addons.AddonFileManager;
 import com.dre.brewery.api.addons.AddonLogger;
 import com.dre.brewery.api.addons.BreweryAddon;
 import com.dre.brewery.recipe.PluginItem;
-import com.dre.brewery.api.addons.AddonInfo;
 import org.bukkit.Bukkit;
 
 public class NexoAddon extends BreweryAddon {
@@ -14,6 +13,9 @@ public class NexoAddon extends BreweryAddon {
     private static AddonLogger logger;
     private static boolean useNexo = false;
 
+    public NexoAddon(BreweryPlugin plugin, AddonLogger logger) {
+        super(plugin, logger);
+    }
 
     @Override
     public void onAddonEnable(AddonFileManager addonFileManager) {
