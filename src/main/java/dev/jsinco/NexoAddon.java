@@ -6,7 +6,7 @@ import com.dre.brewery.api.addons.BreweryAddon;
 import com.dre.brewery.recipe.PluginItem;
 import org.bukkit.Bukkit;
 
-public class NexoAddon extends BreweryAddon {
+public NexoAddon extends BreweryAddon {
 
 
     private static boolean useNexo = false;
