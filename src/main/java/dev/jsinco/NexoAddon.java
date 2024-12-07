@@ -10,6 +10,7 @@ import org.bukkit.Bukkit;
 public class NexoAddon extends BreweryAddon {
 
 
+    private static AddonLogger logger;
     private static boolean useNexo = false;
 
     @Override
@@ -21,7 +22,7 @@ public class NexoAddon extends BreweryAddon {
 
             
             if (useNexo) {
-                getAddonLogger().info("Nexo support enabled!");
+                logger.info("Nexo support enabled!");
             }
         }, 1L);
     }
