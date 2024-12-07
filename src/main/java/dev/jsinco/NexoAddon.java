@@ -10,32 +10,37 @@ import org.bukkit.Bukkit;
 public class NexoAddon extends BreweryAddon {
 
 
-    private static AddonLogger logger;
-    private static boolean useNexo = false;
+  private static boolean useNexo = false;
+  private static NexoAddon instance;
 
-    public NexoAddon(BreweryPlugin plugin, AddonLogger logger) {
-        super(plugin, logger);
-        NexoAddon.logger = logger;
-    }
+  public NexoAddon(BreweryPlugin plugin, AddonLogger logger) {
+    super(plugin, logger);
+  }
 
-    @Override
-    public void onAddonEnable(AddonFileManager addonFileManager) {
-        PluginItem.registerForConfig("nexo", NexoPluginItem::new);
+  @Override
+  public void onAddonEnable(AddonFileManager addonFileManager) {
+    instance = this;
+    PluginItem.registerForConfig("nexo", NexoPluginItem::new);
 
-        BreweryPlugin.getScheduler().runTaskLater(() -> {
-            useNexo = Bukkit.getPluginManager().getPlugin("Nexo") != null;
+    BreweryPlugin.getScheduler().runTaskLater(() -> {
+      useNexo = Bukkit.getPluginManager().getPlugin("Nexo") != null;
 
-            
-            if (useNexo) {
-                logger.info("Nexo support enabled!");
-            }
-        }, 1L);
-    }
 
-    public static boolean isUsingNexo() {
-        return useNexo;
-    }
-    @Override
-    public void onBreweryReload() {
-    }
+      if (useNexo) {
+        getLogger().info("Nexo support enabled!");
+      }
+    }, 1L);
+  }
+
+  public static boolean isUsingNexo() {
+    return useNexo;
+  }
+
+  @Override
+  public void onBreweryReload() {
+  }
+
+  public static NexoAddon getNexoAddonInstance(){
+    return instance;
+  }
 }
