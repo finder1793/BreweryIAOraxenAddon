@@ -9,7 +9,6 @@ import org.bukkit.Bukkit;
 public class NexoAddon extends BreweryAddon {
 
 
-    private static AddonLogger logger;
     private static boolean useNexo = false;
 
     @Override
