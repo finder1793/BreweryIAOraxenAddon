@@ -2,7 +2,6 @@ package dev.jsinco;
 
 import com.dre.brewery.BreweryPlugin;
 import com.dre.brewery.api.addons.AddonFileManager;
-import com.dre.brewery.api.addons.AddonInfo;
 import com.dre.brewery.api.addons.BreweryAddon;
 import com.dre.brewery.recipe.PluginItem;
 import org.bukkit.Bukkit;
