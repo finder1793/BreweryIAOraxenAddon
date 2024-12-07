@@ -21,7 +21,7 @@ public class NexoAddon extends BreweryAddon {
 
             
             if (useNexo) {
-                AddonLogger.info("Nexo support enabled!");
+                getAddonLogger().info("Nexo support enabled!");
             }
         }, 1L);
     }
