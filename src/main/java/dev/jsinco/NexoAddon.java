@@ -2,7 +2,6 @@ package dev.jsinco;
 
 import com.dre.brewery.BreweryPlugin;
 import com.dre.brewery.api.addons.AddonFileManager;
-import com.dre.brewery.api.addons.AddonLogger;
 import com.dre.brewery.api.addons.BreweryAddon;
 import com.dre.brewery.recipe.PluginItem;
 import org.bukkit.Bukkit;
@@ -10,7 +9,6 @@ import org.bukkit.Bukkit;
 public class NexoAddon extends BreweryAddon {
 
 
-    private static AddonLogger logger;
     private static boolean useNexo = false;
 
     @Override
@@ -19,11 +17,6 @@ public class NexoAddon extends BreweryAddon {
 
         BreweryPlugin.getScheduler().runTaskLater(() -> {
             useNexo = Bukkit.getPluginManager().getPlugin("Nexo") != null;
-
-            
-            if (useNexo) {
-                logger.info("Nexo support enabled!");
-            }
         }, 1L);
     }
 
