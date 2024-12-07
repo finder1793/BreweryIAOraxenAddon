@@ -11,6 +11,7 @@ public class NexoAddon extends BreweryAddon {
 
 
   private static boolean useNexo = false;
+  private static NexoAddon instance;
 
   public NexoAddon(BreweryPlugin plugin, AddonLogger logger) {
     super(plugin, logger);
@@ -18,6 +19,7 @@ public class NexoAddon extends BreweryAddon {
 
   @Override
   public void onAddonEnable(AddonFileManager addonFileManager) {
+    instance = this;
     PluginItem.registerForConfig("nexo", NexoPluginItem::new);
 
     BreweryPlugin.getScheduler().runTaskLater(() -> {
@@ -36,5 +38,9 @@ public class NexoAddon extends BreweryAddon {
 
   @Override
   public void onBreweryReload() {
+  }
+
+  public static NexoAddon getNexoAddonInstance(){
+    return instance;
   }
 }
