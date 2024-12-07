@@ -15,7 +15,7 @@ public class NexoAddon extends BreweryAddon {
 
     public NexoAddon(BreweryPlugin plugin, AddonLogger logger) {
         super(plugin, logger);
-        AddonLogger.logger = logger;
+        NexoAddon.logger = logger;
     }
 
     @Override
